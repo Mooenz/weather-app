@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap");
+:root {
+  /* Colors */
+  --navy: #053742;
+  --blue: #39a2db;
+  --blue-grey: #a2dbfa;
+  --grey: #e8f0f2;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main {
+  background-color: var(--grey);
+  color: var(--navy);
+  min-height: 100vh;
+  font-family: 'Nunito', sans-serif;
+}
+
+.main__content {
+  width: 100%;
+  padding: 60px 24px;
+  text-align: center;
+}
+
+.main__content h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  margin: 0 0 10px;
+}
+
+.main__content p {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  opacity: 90%;
+}
+
+.main__search {
+  padding: 0 24px 60px;
+}
+
+.main__search-container {
+  border: 2px solid var(--blue);
+  border-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  font-size: 1.8rem;
+  color: var(--navy);
+}
+
+.main__search-container:hover, .main__search-container:focus-within {
+  border: 2px solid var(--blue-grey);
+}
+
+.main__search-container .icon {
+  height: 60px;
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px;
+  border-radius: 100px 0 0 100px;
+  border: none;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.main__search-container .icon:active {
+  background-color: var(--blue-grey);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.main__search-container input {
+  width: 100%;
+  height: 60px;
+  outline: none;
+  border-radius: 100px;
+  padding-right: 15px;
+  border: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.8rem;
+  color: var(--navy);
+  font-weight: 500;
+  padding-left: 5px;
+}
+/*# sourceMappingURL=style.css.map */
