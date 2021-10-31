@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App - Mooenz</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/icon/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <main class="main">
+      <section class="main__content">
+        <h1>Weather App</h1>
+        <p>This is a weather app, consulting your city climate.</p>
+      </section>
+
+      <section class="main__search">
+        <div class="main__search-container">
+          <div class="icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <input class="input" type="text" placeholder="Into Your City ..." />
+        </div>
+      </section>
+
+      <section class="main__search-result"></section>
+
+      <script src="./src/index.js"></script>
+    </main>
+  </body>
+</html>
