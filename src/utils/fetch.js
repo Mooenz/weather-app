@@ -13,6 +13,7 @@ async function fetchSearchCity(city) {
   try {
     const RESPONSE = await fetch(URL_CITY(city));
     const RESPONSE_JSON = await RESPONSE.json();
+
     return RESPONSE_JSON;
   } catch (error) {
     showError(error);
@@ -23,6 +24,7 @@ async function fetchSearchCoordinate(latitude, longitude) {
   try {
     const RESPONSE = await fetch(URL_COORDINATE(latitude, longitude));
     const RESPONSE_JSON = await RESPONSE.json();
+
     return RESPONSE_JSON;
   } catch (error) {
     showError(error);
