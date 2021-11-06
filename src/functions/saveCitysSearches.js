@@ -1,9 +1,15 @@
+// Functions
+import { showSaveCitysSearches } from './showSaveCitysSearches.js';
 
-let citySearch = [];
+let citySearch = ['Ibagué', 'Bogota'];
 
 function saveCitysSearches(city) {
-  citySearch.push(city);
+  if (!(city === undefined)) {
+    if (!citySearch.includes(city)) {
+      citySearch.push(city);
+      showSaveCitysSearches(citySearch);
+    }
+  }
 }
-
 
 export { saveCitysSearches, citySearch };
