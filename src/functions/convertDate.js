@@ -1,7 +1,21 @@
+// Utils
+import convertToDays from '../utils/convertToDays.js';
+import convertToMonth from '../utils/convertToMonth.js';
+
 const convertDate = (timeStamp) => {
-  const date = new Date(timeStamp);
+  const date = new Date(timeStamp * 1000);
 
-  return date; 
-}
+  const day = date.getDay();
+  const dayNumber = date.getDate();
+  const month = date.getMonth();
 
-export  {convertDate};
+  const dayConvert = convertToDays(day);
+  const monthConvert = convertToMonth(month);
+
+  return {
+    day: dayConvert.getDay(),
+    dayNumber: dayNumber,
+    month: monthConvert.getMonth(),
+  };
+};
+export { convertDate };
