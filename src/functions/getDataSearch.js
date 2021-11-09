@@ -1,16 +1,14 @@
 // Utils
-import { INPUT_SEARCH } from '../utils/DOMElemtens.js';
 import { fetchSearchCity, fetchSearchCoordinate } from '../utils/fetch.js';
 
 // Functions
-import { saveCitysSearches, citySearch } from './saveCitysSearches.js';
+import { saveCitiesSearches } from './saveCitiesSearches.js';
 
-async function getDataSearch() {
+async function getDataSearch(cityInput) {
   try {
-    const cityInput = INPUT_SEARCH.value;
     const CITY = await fetchSearchCity(cityInput);
 
-    saveCitysSearches(CITY.name);
+    saveCitiesSearches(CITY.name);
 
     const CITY_DATA = await fetchSearchCoordinate(
       CITY.coord.lat,

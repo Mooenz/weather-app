@@ -1,5 +1,5 @@
 // Utilis
-import { MAIN_RESULT_HOURLY } from '../utils/DOMElemtens.js';
+import { MAIN_RESULT_HOURLY } from '../utils/DOMElements.js';
 
 // Functions
 import { convertTime } from './convertTime.js';
@@ -12,9 +12,11 @@ const showHourly = (hourlyData) => {
       const { dt, temp, weather } = hourlyData[property];
 
       MAIN_RESULT_HOURLY.innerHTML += `
-      <p>${convertTime(dt)}</p>
-      <div>icono</div>
-      <p>${Math.round(temp)}°</p>
+      <div class="hourly">
+        <p>${convertTime(dt)}</p>
+        <div>icono</div>
+        <p>${Math.round(temp)}°</p>
+      </div>
       `;
     }
   } catch (error) {

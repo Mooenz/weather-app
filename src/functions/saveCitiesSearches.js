@@ -14,4 +14,4 @@ function saveCitiesSearches(city) {
 
 showSaveCitesSearches(citySearch);
 
-export { saveCitiesSearches }; 
+export { saveCitiesSearches };

@@ -1,5 +1,5 @@
 // Utilis
-import { MAIN_RESULT_DAILY } from '../utils/DOMElemtens.js';
+import { MAIN_RESULT_DAILY } from '../utils/DOMElements.js';
 
 // Functions
 import { convertDate } from './convertDate.js';
@@ -14,8 +14,10 @@ const showDaily = (dailyData) => {
       const { day, dayNumber, month } = convertDate(dt);
 
       (MAIN_RESULT_DAILY.innerHTML += `
-        <p>${day}, ${dayNumber} ${month}</p>
-        <p>${Math.round(max)}° / <span>${Math.round(min)}°</span></p>
+        <div>
+          <p>${day}, ${dayNumber} ${month}</p>
+          <p>${Math.round(max)}° / <span>${Math.round(min)}°</span></p>
+        </div>
       `);
     }
   } catch (error) {

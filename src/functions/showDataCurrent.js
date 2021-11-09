@@ -1,5 +1,5 @@
 // Utils
-import { MAIN_RESULT, RESULT } from '../utils/DOMElemtens.js';
+import { MAIN_RESULT, RESULT } from '../utils/DOMElements.js';
 
 // Functions
 import { convertTime } from './convertTime.js';
