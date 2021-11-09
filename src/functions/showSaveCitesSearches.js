@@ -1,11 +1,13 @@
 // Utils
-import { MAIN_HISTORY_CONTAINER, RESULT } from '../utils/DOMElemtens.js';
+import { MAIN_HISTORY_CONTAINER } from '../utils/DOMElements.js';
 import { fetchSearchCity } from '../utils/fetch.js';
 
-async function showSaveCitysSearches(Citys) {
+async function showSaveCitesSearches(Cities) {
   try {
+    console.log(Cities)
     MAIN_HISTORY_CONTAINER.innerHTML = '';
-    Citys.map((city) => {
+
+    Cities.map((city) => {
       fetchSearchCity(city).then((response) => {
         const { name, main } = response;
 
@@ -23,4 +25,4 @@ async function showSaveCitysSearches(Citys) {
   }
 }
 
-export { showSaveCitysSearches };
+export { showSaveCitesSearches };
