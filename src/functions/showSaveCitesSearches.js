@@ -4,7 +4,6 @@ import { fetchSearchCity } from '../utils/fetch.js';
 
 async function showSaveCitesSearches(Cities) {
   try {
-    console.log(Cities)
     MAIN_HISTORY_CONTAINER.innerHTML = '';
 
     Cities.map((city) => {
@@ -15,7 +14,7 @@ async function showSaveCitesSearches(Cities) {
           <div class="city-search">
             <h3>${name}</h3>
             <p>${Math.round(main.temp)}°</p>
-            <p>feels like ${Math.round(main.feels_like)}°</p>
+            <p>Feels Like ${Math.round(main.feels_like)}°</p>
           </div>
         `);
       });
