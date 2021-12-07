@@ -1,12 +1,13 @@
+const $ = (selector) => document.querySelector(selector);
 // Select element
-const INPUT_SEARCH = document.querySelector('.input');
-const ICON_SEARCH = document.querySelector('.icon');
-const MAIN_HISTORY_CONTAINER = document.querySelector(
-  '.main__history-container'
-);
-const MAIN_RESULT_CURRENT = document.querySelector('.main__result-current');
-const MAIN_RESULT_HOURLY = document.querySelector('.main__result-hourly-content');
-const MAIN_RESULT_DAILY = document.querySelector('.main__result-daily-content');
+const INPUT_SEARCH = $('.input');
+const ICON_SEARCH = $('.icon');
+const MAIN_HISTORY_CONTAINER = $('.main__history-container');
+const MAIN_RESULT_CURRENT = $('.main__result-current');
+const MAIN_RESULT_HOURLY = $('.main__result-hourly-content');
+const MAIN_RESULT_DAILY = $('.main__result-daily-content');
+const MAIN_SEARCH_CONTAINER = $('.main__search-container');
+const MAIN_SEARCH = $('.main__search');
 
 export {
   INPUT_SEARCH,
@@ -15,4 +16,6 @@ export {
   MAIN_HISTORY_CONTAINER,
   MAIN_RESULT_HOURLY,
   MAIN_RESULT_DAILY,
+  MAIN_SEARCH_CONTAINER,
+  MAIN_SEARCH,
 };
