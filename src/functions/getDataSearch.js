@@ -1,23 +1,27 @@
 // Utils
 import { fetchSearchCity, fetchSearchCoordinate } from '../utils/fetch.js';
-
+import { MAIN_SEARCH_CONTAINER, MAIN_SEARCH } from '../utils/DOMElements.js';
 // Functions
-import { saveCitiesSearches } from './saveCitiesSearches.js';
+// import { saveCitiesSearches } from './saveCitiesSearches.js';
 
 async function getDataSearch(cityInput) {
   try {
     const CITY = await fetchSearchCity(cityInput);
+    // saveCitiesSearches(CITY.name);
 
-    saveCitiesSearches(CITY.name);
+    if (CITY.cod === 200) {
+      const { lat, lon } = CITY.coord;
+      const CITY_DATA = await fetchSearchCoordinate(lat, lon);
 
-    const CITY_DATA = await fetchSearchCoordinate(
-      CITY.coord.lat,
-      CITY.coord.lon
-    );
+      CITY_DATA.city = { name: CITY.name, country: CITY.sys.country };
+      return CITY_DATA;
+    } else {
+      // console.log(MAIN_SEARCH_CONTAINER.classList)
+      MAIN_SEARCH_CONTAINER.classList.add('error');
 
-    CITY_DATA.city = { name: CITY.name, country: CITY.sys.country };
-
-    return CITY_DATA;
+      MAIN_SEARCH.innerHTML += `<p>💥<span class="text-error">La cuidad no fue encontrada, lo siento.</span></p>`;
+      return CITY.cod;
+    }
   } catch (error) {
     console.error(
       `Existe un error al llamar los datos de una ciudad: ${error}`
