@@ -14,7 +14,7 @@ const showHourly = (hourlyData) => {
       const {icon} = weather[0]
       MAIN_RESULT_HOURLY.innerHTML += `
       <div class="hourly">
-        <p>${convertTime(dt)}</p>
+        <p>${convertTime(dt)}0</p>
         <img src="${urlImg}${icon}@2x.png" />
         <p class="temp">${Math.round(temp)}°</p>
       </div>
