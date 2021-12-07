@@ -16,7 +16,7 @@ const showHourly = (hourlyData) => {
       <div class="hourly">
         <p>${convertTime(dt)}</p>
         <img src="${urlImg}${icon}@2x.png" />
-        <p>${Math.round(temp)}°</p>
+        <p class="temp">${Math.round(temp)}°</p>
       </div>
       `;
     }

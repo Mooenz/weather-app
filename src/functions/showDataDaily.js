@@ -1,4 +1,4 @@
-// Utilis
+// Utils
 import { MAIN_RESULT_DAILY } from '../utils/DOMElements.js';
 
 // Functions
@@ -13,12 +13,14 @@ const showDaily = (dailyData) => {
       const { max, min } = temp;
       const { day, dayNumber, month } = convertDate(dt);
 
-      (MAIN_RESULT_DAILY.innerHTML += `
-        <div>
-          <p>${day}, ${dayNumber} ${month}</p>
-          <p>${Math.round(max)}° / <span>${Math.round(min)}°</span></p>
+      MAIN_RESULT_DAILY.innerHTML += `
+        <div class="item">
+          <p class="date"><span>${day}</span>, ${dayNumber} ${month}</p>
+          <p  class="temp">${Math.round(max)}° / <span>${Math.round(
+        min
+      )}°</span></p>
         </div>
-      `);
+      `;
     }
   } catch (error) {
     console.error(`Existe un error al mostrar los datos por dias: ${error}`);
