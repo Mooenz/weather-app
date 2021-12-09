@@ -1,13 +1,26 @@
-# weather-app 🌍 🌏 🌎
+# **Weather-App** 🌎
 
 This is a weather app, consulting your city climate.
 
-## live 🚀
+## **Demo** 🚀
 
 [View Demo](https://mooenz.github.io/weather-app/)
 
-## Tools
+## **Tools** 🔨
 
-## Preview 🔖
+- HTML
+- SCSS
+- JS Vanilla
 
-![Img proyect](public/diagrama.png)
+## **Preview** 📷
+
+![Preview Proyecto](./preview.jpg)
+
+## **Contact** 📧
+
+- Linkedin [Mooenz](https://www.linkedin.com/in/mooenz/)
+- Web Site [Curriculum Vitae](https://mooenz.github.io/curriculum-vitae/)
+
+## **Licencie** 🛸
+
+This project is MIT licensed
