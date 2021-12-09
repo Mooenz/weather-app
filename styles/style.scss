@@ -9,7 +9,6 @@
   --blue-grey: #c4d8e7;
   --grey: #f1fafe;
   --orange-light: #ec6e4c;
-
 }
 
 html {
@@ -28,10 +27,11 @@ html {
   min-height: 100vh;
   min-width: 320px;
   font-family: 'Nunito', sans-serif;
+  padding: 70px 0;
 
   &__content {
     width: 100%;
-    padding: 70px 24px 40px;
+    padding: 0 24px 40px;
     text-align: center;
   }
 
@@ -63,6 +63,8 @@ html {
       color: var(--black);
       height: 40px;
       transition-duration: 0.5s;
+      max-width: 900px;
+      margin: 0 auto;
 
       &:hover,
       &:focus-within {
@@ -100,7 +102,7 @@ html {
         font-weight: 500;
         padding-left: 5px;
       }
-      
+
       &.error {
         border: 2px solid var(--orange-light);
       }
@@ -111,7 +113,7 @@ html {
       margin: 8px 0 0;
     }
 
-    .text-error { 
+    .text-error {
       color: var(--orange-light);
       font-size: 1.4rem;
       font-weight: 700;
@@ -121,6 +123,12 @@ html {
 
   &__history {
     padding: 0 0 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
 
     h2 {
       font-size: 2.5rem;
@@ -171,10 +179,24 @@ html {
   }
 
   &__result {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: auto;
+      grid-template-areas:
+        'title title'
+        'current daily'
+        'hourly hourly';
+    }
+
     &-title {
       font-size: 2.5rem;
       margin: 0 0 20px;
       padding: 0 24px;
+      grid-area: title;
     }
 
     h3 {
@@ -185,10 +207,16 @@ html {
     &-current {
       margin: 20px 0 30px;
       padding: 0 24px;
+      grid-area: current;
+
+      @media screen and (min-width: 768px) { 
+        
+      }
 
       .card {
         display: flex;
         gap: 20px;
+        width: 100%;
         max-width: 300px;
         align-items: center;
         flex-direction: column;
@@ -239,14 +267,23 @@ html {
 
     &-hourly {
       font-size: 16px;
+      grid-area: hourly;
 
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      @media screen and (min-width: 768px) { 
+        
+      }
+      
       &-content {
         display: flex;
         text-align: center;
         overflow: scroll;
-        margin: 30px 0;
-        cursor: grab;
         margin: 20px 0 30px;
+        cursor: grab;
+
 
         .hourly {
           height: 140px;
@@ -261,7 +298,14 @@ html {
     }
 
     &-daily {
-      padding: 0 0 70px;
+      max-width: 375px;
+      justify-self: center;
+      gap: 20px;
+      grid-area: daily;
+
+      @media screen and (min-width: 768px) { 
+        
+      }
 
       &-content {
         // display: flex;

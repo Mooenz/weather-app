@@ -15,13 +15,13 @@ let defaultSearch = {
 };
 
 async function searchCity(event) {
+  console.log(event);
   try {
     const { keyCode, type } = event;
 
     if (keyCode === 13 || type === 'click') {
       const cityInput = INPUT_SEARCH.value || 'ibague';
       const dataCity = await getDataSearch(cityInput);
-      console.log(dataCity);
 
       if (!(dataCity === 400)) {
         const { city, current, hourly, daily } = dataCity;

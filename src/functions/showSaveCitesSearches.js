@@ -1,11 +1,8 @@
 // Utils
 import { MAIN_HISTORY_CONTAINER } from '../utils/DOMElements.js';
-// import { fetchSearchCity } from '../utils/fetch.js';
 
 async function showSaveCitesSearches(city) {
   try {
-    const title = '';
-
     const { name, temp, feels_like } = city;
 
     return (MAIN_HISTORY_CONTAINER.innerHTML += `
